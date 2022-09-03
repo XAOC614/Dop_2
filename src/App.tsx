@@ -10,16 +10,11 @@ type dataType = {
     title: string
     userId: number
 }
-
-
-
-
 function App() {
     const getMeData = () => {
        setData([])
     }
     const [data, setData] = useState <Array<dataType>> ([])
-
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
